@@ -15,6 +15,7 @@ public class DebugConsoleLogsController : RestfulControllerBase<DebugConsoleLogs
         _debugConsoleLogs = debugConsoleLogs;
     }
 
+    [HttpGet]
     public IActionResult Get(bool onlyPersisted, string? authKey, int? page, int? pageSize, string sortColumn, SortOrder? sortOrder)
     {
         return ReturnOkResult(() => _debugConsoleLogs.Get(onlyPersisted, new SortOptions(page, pageSize, sortColumn, sortOrder), authKey));
