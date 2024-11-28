@@ -6,6 +6,6 @@ namespace ITBees.ConsoleLogger.Interfaces;
 
 public interface IDebugConsoleLogs
 {
-    PaginatedResult<DebugConsoleLogVm> Get(bool onlyPersisted, SortOptions sortOptions);
+    PaginatedResult<DebugConsoleLogVm> Get(bool onlyPersisted, SortOptions sortOptions, string? authKey);
     void Update(DebugConsoleLogUm debugConsoleLogUm);
 }

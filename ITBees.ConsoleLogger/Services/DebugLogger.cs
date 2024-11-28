@@ -1,5 +1,4 @@
-﻿using ITBees.ConsoleLogger.Controllers;
-using ITBees.ConsoleLogger.Interfaces;
+﻿using ITBees.ConsoleLogger.Interfaces;
 using ITBees.ConsoleLogger.Services.Models;
 using ITBees.Interfaces.Repository;
 using ITBees.UserManager.Interfaces;
