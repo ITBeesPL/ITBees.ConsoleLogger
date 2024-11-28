@@ -1,4 +1,4 @@
-﻿namespace ITBees.ConsoleLogger;
+﻿namespace ITBees.ConsoleLogger.Interfaces;
 
 public class DebugRequestIm
 {

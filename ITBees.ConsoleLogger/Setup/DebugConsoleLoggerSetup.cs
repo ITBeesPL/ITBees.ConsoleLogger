@@ -1,4 +1,7 @@
-﻿using ITBees.FAS.Setup;
+﻿using ITBees.ConsoleLogger.Interfaces;
+using ITBees.ConsoleLogger.Services;
+using ITBees.ConsoleLogger.Services.Models;
+using ITBees.FAS.Setup;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +13,7 @@ public class DebugConsoleLoggerSetup : IFasDependencyRegistration
     public void Register(IServiceCollection services, IConfigurationRoot configurationRoot)
     {
         services.AddScoped<IDebugLogger, DebugLogger>();
+        services.AddScoped<IDebugConsoleLogs, DebugConsoleLogs>();
     }
 }
 

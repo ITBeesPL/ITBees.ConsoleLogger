@@ -1,8 +1,9 @@
-﻿using ITBees.RestfulApiControllers;
+﻿using ITBees.ConsoleLogger.Interfaces;
+using ITBees.RestfulApiControllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace ITBees.ConsoleLogger
+namespace ITBees.ConsoleLogger.Controllers
 {
     public class DebugConsoleLoggerController : RestfulControllerBase<DebugConsoleLoggerController>
     {
@@ -17,7 +18,7 @@ namespace ITBees.ConsoleLogger
         [HttpPost]
         public IActionResult Post([FromBody] DebugRequestIm debugRequestIm)
         {
-            _debugLogger.Save(debugRequestIm);
+            _debugLogger.Save(debugRequestIm, base.GetClientIp());
             return Ok();
         }
     }
